@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { CreateAnimalDto } from './dto/create-animal.dto';
 
 @Injectable()
 export class AnimalService {
-  create() {
+  create(createAnimalDto: CreateAnimalDto) {
     return 'This action adds a new animal';
   }
 
@@ -14,7 +15,7 @@ export class AnimalService {
     return `This action returns a #${id} animal`;
   }
 
-  update(id: number) {
+  update(id: number, createAnimalDto: CreateAnimalDto) {
     return `This action updates a #${id} animal`;
   }
 

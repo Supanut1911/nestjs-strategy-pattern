@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AnimalModule } from './animal/animal.module';
 
 @Module({
-  imports: [AnimalModule],
+  imports: [AnimalModule.register()],
   controllers: [AppController],
   providers: [],
 })
